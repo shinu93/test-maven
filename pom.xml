@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- This is often your domain name (reversed.)  -->
-    <groupId>com.yourorganization</groupId>
+    <groupId>xyz.skctech</groupId>
     <!-- The name of this project (actually, the name of the artifact, which is the thing that this project produces. A jar in this case.) -->
     <artifactId>maven-sample</artifactId>
     <!-- The version of this project. SNAPSHOT means "we're still working on it" -->
@@ -59,6 +59,10 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8888/manager/text</url>
+                    <path>/rps</path>
+                </configuration>
             </plugin>
         </plugins>
     </build>
